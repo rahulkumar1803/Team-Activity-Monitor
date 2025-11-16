@@ -20,7 +20,7 @@ async function ask() {
     questionInput.value = "";
 
     try {
-        const res = await fetch("/ask", {
+        const res = await fetch("https://team-activity-monitor.onrender.com/ask", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ question })
