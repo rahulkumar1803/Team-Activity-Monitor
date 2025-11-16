@@ -1,0 +1,272 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* LIGHT MODE */
+body {
+    background: linear-gradient(135deg, #7b2ff7, #f107a3, #ff512f);
+    height: 100vh;
+    animation: gradientShift 10s ease infinite;
+    background-size: 400%;
+    transition: 0.4s;
+}
+
+/* DARK MODE */
+body.dark {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* MAIN CONTAINER */
+.container {
+    width: 650px;
+    padding: 50px;
+    margin: auto;
+    margin-top: 140px;
+    background: rgba(255, 255, 255, 0.28);
+    backdrop-filter: blur(18px);
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+    animation: popIn 0.4s ease;
+    color: #fff;
+    transition: 0.3s;
+}
+
+/* DARK MODE CONTAINER */
+body.dark .container {
+    background: rgba(0, 0, 0, 0.55);
+    color: #eee;
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.92);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.subtext {
+    margin-bottom: 20px;
+    opacity: 0.85;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 14px;
+    border: none;
+    font-size: 17px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+/* DARK MODE INPUT */
+body.dark input {
+    background: #1b1b1b;
+    color: #eee;
+}
+
+button {
+    width: 60%;
+    padding: 15px;
+    margin-top: 25px;
+    border-radius: 14px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    background: #ffcb2b;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+button:hover {
+    background: #ffe894;
+    transform: scale(1.07);
+}
+
+body.dark button {
+    background: #ffd447;
+}
+
+/* LOADER */
+.loader {
+    margin-top: 20px;
+    display: none;
+    color: #fff;
+}
+
+.spinner {
+    width: 45px;
+    height: 45px;
+    border: 4px solid rgba(255, 255, 255, 0.4);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 1s infinite linear;
+    margin: auto;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ---------------- CLEAN & MODERN MODAL ---------------- */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 999;
+    backdrop-filter: blur(4px);
+}
+
+/* MAIN MODAL CARD */
+.modal-content {
+    width: 620px;
+    max-height: 82vh;
+    overflow-y: auto;
+    padding: 32px;
+    border-radius: 20px;
+    animation: fadeIn 0.3s ease;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+    color: #222;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+/* DARK MODE MODAL */
+body.dark .modal-content {
+    background: rgba(35, 35, 35, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: #e6e6e6;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    font-size: 27px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ff0066;
+    transition: 0.2s;
+}
+
+.close-btn:hover {
+    transform: scale(1.2);
+    color: #ff4f96;
+}
+
+/* ---------------- POPULATED OUTPUT AREA ---------------- */
+.output-box {
+    margin-top: 20px;
+    white-space: pre-wrap;
+    font-size: 17px;
+    line-height: 1.65;
+    padding: 18px 20px;
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #222;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* DARK MODE OUTPUT BOX */
+body.dark .output-box {
+    background: rgba(0, 0, 0, 0.45);
+    color: #f4f4f4;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 6px 26px rgba(0, 0, 0, 0.4);
+}
+
+/* BOLD & EMPHASIS STYLES */
+.output-box strong {
+    color: #ff008c;
+    font-weight: 700;
+}
+
+body.dark .output-box strong {
+    color: #ff66bf;
+}
+
+.output-box em {
+    color: #0066ff;
+    font-style: italic;
+}
+
+body.dark .output-box em {
+    color: #6ea8ff;
+}
+
+/* LIST STYLING FOR OUTPUT */
+.output-box ul,
+.output-box ol {
+    margin-left: 18px;
+    padding-left: 10px;
+}
+
+.output-box li {
+    margin: 6px 0;
+}
+
+/* HEADINGS INSIDE OUTPUT */
+.output-box h1,
+.output-box h2,
+.output-box h3 {
+    margin-top: 12px;
+    margin-bottom: 8px;
+    color: #ff0077;
+}
+
+body.dark .output-box h1,
+body.dark .output-box h2,
+body.dark .output-box h3 {
+    color: #ff55aa;
+}
