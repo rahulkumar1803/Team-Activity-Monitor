@@ -56,6 +56,10 @@ Understands questions without strict format:
 * “Sarah’s recent commits?”
 * “Has Mike worked this week?”
 
+### 🔹 Live Demo
+
+* https://team-activity-monitor.vercel.app/
+
 ---
 
 ## 🧪 Sample Test Queries
