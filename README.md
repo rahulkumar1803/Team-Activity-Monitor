@@ -79,7 +79,7 @@ project/
 │   ├── jira.js
 │   ├── github.js
 │   ├── ai.js
-│   ├── name-detection.js
+│   ├── query-parser.js
 │
 ├── public/
 │   ├── index.html
